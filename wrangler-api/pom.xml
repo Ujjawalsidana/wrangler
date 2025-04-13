@@ -18,7 +18,7 @@
   <parent>
     <artifactId>wrangler</artifactId>
     <groupId>io.cdap.wrangler</groupId>
-    <version>4.12.0-SNAPSHOT</version>
+    <version>4.2.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -39,6 +39,24 @@
       <version>${cdap.version}</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.7.2</version>
+    <scope>test</scope>
+    </dependency>
+
+    <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.7.0</version> <!-- or a later version -->
+    <scope>test</scope>
+</dependency>
+
+    
+
+
+
 
   </dependencies>
 </project>

@@ -52,6 +52,12 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
+      <groupId>io.cdap</groupId>
+      <artifactId>wrangler-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
       <version>${protobuf.version}</version>
@@ -201,6 +207,15 @@
       <artifactId>reflections</artifactId>
       <version>${reflections.version}</version>
     </dependency>
+    
+    <dependency>
+      <groupId>io.cdap</groupId>
+      <artifactId>wrangler-api</artifactId>
+      <version>4.2.0</version>
+      <scope>compile</scope> <!-- Or the appropriate scope for your use case -->
+    </dependency>
+
+
 
     <!-- Apache -->
 
@@ -335,6 +350,17 @@
           </execution>
         </executions>
       </plugin>
+      
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version> <!-- Or a later version -->
+        <configuration>
+            <useModulePath>false</useModulePath> <!-- For JDK 9 and above -->
+        </configuration>
+    </plugin>
+
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>buildnumber-maven-plugin</artifactId>

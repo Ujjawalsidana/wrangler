@@ -140,7 +140,7 @@ numberRange
  ;
 
 value
- : String | Number | Column | Bool
+ : String | Number | Column | Bool | ByteSize | TimeDuration
  ;
 
 ecommand
@@ -194,6 +194,14 @@ stringList
 identifierList
  : Identifier (',' Identifier)*
  ;
+byteSize
+ : INT UNIT // example: 100 MB
+ ;
+
+timeDuration
+ : INT TIMEUNIT // example: 5 sec
+ ;
+
 
 
 /*
@@ -280,6 +288,15 @@ EscapeSequence
    |   OctalEscape
    ;
 
+ByteSize
+ : Digit+ ('.' Digit+)? ByteUnit
+ ;
+
+TimeDuration
+ : Digit+ ('.' Digit+)? TimeUnit
+ ;
+
+
 fragment
 OctalEscape
    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
@@ -311,3 +328,20 @@ fragment Int
 fragment Digit
  : [0-9]
  ;
+
+fragment ByteUnit
+ : [bB]
+ | [kK] [bB]
+ | [mM] [bB]
+ | [gG] [bB]
+ | [tT] [bB]
+ ;
+
+fragment TimeUnit
+ : 'ms'
+ | 's'
+ | 'm'
+ | 'h'
+ ;
+
+
