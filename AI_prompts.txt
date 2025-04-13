@@ -1,0 +1,22 @@
+Now I am getting this error... (used after Maven compile errors)
+
+How to resolve this?
+Where to add of method in ByteSize.java?
+
+WHile testing I get
+What does the error in ByteSizeParserTest and TimeDurationParserTest mean?
+
+How to fix test failure related to getMillis() method?
+
+Regarding of MAVEN and its dependencies
+
+What does [ERROR] Failed to execute goal org.apache.rat:apache-rat-plugin mean?
+
+What does Failed during checkstyle execution: There are 6 errors reported mean?
+
+
+These are the lines I added for visitByteSize and visitTimeDuration, is it correct?
+
+What should type() method return in ByteSize class?
+
+"Though I will not be able to give the final results but have given my best whatever I can. Thankyou Hope for a positive rreply from your side."
